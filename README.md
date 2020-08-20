@@ -6,4 +6,4 @@
 - selenium
 
 ### Execução do codigo
-![execução do codigo](https://github.com/alberttosouza/bot__instagram/blob/master/execucao_cod.gif)
+![execução do codigo]()
