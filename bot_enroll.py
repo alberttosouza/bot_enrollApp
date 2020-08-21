@@ -59,7 +59,7 @@ class bot_enrollapp:
                     '/html/body/div[1]/main/div/div/div/div/div[2]/div[2]/form/div/button')\
                     .click()
                 time.sleep(1)
-                # continuar
+                #continuar
                 self.driver.find_element_by_xpath(
                     '/html/body/div[1]/main/div/div/div/div/div[2]/div[2]/div/div[2]/button')\
                     .click()
@@ -67,11 +67,15 @@ class bot_enrollapp:
 
             else:
                 print('Pergunta sim/não')
-                # pergunta sim/não
+                #pergunta sim/não
                 self.driver.find_element_by_xpath(f'{res_sort}').click()
-                print('Votou...')
+                if res_sort == '/html/body/div[1]/main/div/div/div/div/div[2]/div[2]/div/button[1]':
+                    voto = 'Sim'
+                else:
+                    voto = 'Não'
+                print(f'Votou {voto}...')
                 time.sleep(1)
-                # continuar
+                #continuar
                 self.driver.find_element_by_xpath(
                     '/html/body/div[1]/main/div/div/div/div/div[2]/div[2]/div/div[2]/button') \
                     .click()
